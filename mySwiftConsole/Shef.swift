@@ -10,32 +10,58 @@ import Foundation
 
 class Chef {
     let name = "Daigoh Hattori"
+    
     init() {
+        // 下ごしらえは、すぐにやる
         prepareCooking()
     }
     
+    // 下ごしらえ
     func prepareCooking() {
         print("prepareCooking...ok")
     }
+
+    func cooking(ingredient:Ingredient) {
+        print("cooking..ok!")
+    }
     
-    func cook(ingredient:Ingredient) {
-        print("cooking..ok! created by " + name)
+    func order() {
+        
     }
 }
 
 class RamenChef : Chef {
-    var ramenIngredient:Ingredient
+    var recommendedIngredient:Ingredient // シェフお勧めの素材
+
+    let recommendedNoodles:String = "細麺"
+    let recommendedSoup:String = "鶏白湯"
+    let recommendedTopping:String = "チャーシュー"
+    
     override init() {
+        recommendedIngredient = Ingredient(noodles: recommendedNoodles, soup: recommendedSoup, topping: recommendedTopping)
         super.init()
     }
     
-    override func cook(ingredient:Ingredient) {
-        //var order:Ramen
+    override func cooking(ingredient:Ingredient) {
+        super.cooking(ingredient: recommendedIngredient)
+        print("ramen cooking...ok! created by " + name)
+    }
+
+    // お任せで作って
+    override func order() {
+        super.order()
+    }
+
+    // この材料で作って
+    func request(ingredient:Ingredient) -> Ramen {
+//        if ingredient.noodles.isEmpty {
+//            ingredient.noodles = recommendedNoodles
+//        }
+
+        let ramen:Ramen = Ramen(ingredient:recommendedIngredient)
+        cooking(ingredient: recommendedIngredient)
         
-        
-        
-        //super.cook()
-        print("ramen cooking...ok!")
+        return ramen
     }
 }
 
