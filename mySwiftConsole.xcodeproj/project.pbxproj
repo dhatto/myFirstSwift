@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE3115E21DE4518300922DC3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3115E11DE4518300922DC3 /* main.swift */; };
+		CEF1DA331DE4649700FF7092 /* ramen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DA321DE4649700FF7092 /* ramen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		CE3115DE1DE4518300922DC3 /* mySwiftConsole */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mySwiftConsole; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3115E11DE4518300922DC3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CEF1DA321DE4649700FF7092 /* ramen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ramen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3115E11DE4518300922DC3 /* main.swift */,
+				CEF1DA321DE4649700FF7092 /* ramen.swift */,
 			);
 			path = mySwiftConsole;
 			sourceTree = "<group>";
@@ -122,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3115E21DE4518300922DC3 /* main.swift in Sources */,
+				CEF1DA331DE4649700FF7092 /* ramen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +257,7 @@
 				CE3115E71DE4518300922DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
