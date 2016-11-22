@@ -18,13 +18,22 @@ class Chef {
         print("prepareCooking...ok")
     }
     
-    func cook() {
+    func cook(ingredient:Ingredient) {
         print("cooking..ok! created by " + name)
     }
 }
 
 class RamenChef : Chef {
-    override func cook() {
+    var ramenIngredient:Ingredient
+    override init() {
+        super.init()
+    }
+    
+    override func cook(ingredient:Ingredient) {
+        //var order:Ramen
+        
+        
+        
         //super.cook()
         print("ramen cooking...ok!")
     }
