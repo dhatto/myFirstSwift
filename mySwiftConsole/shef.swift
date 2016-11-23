@@ -9,13 +9,14 @@
 import Foundation
 
 class Chef {
-    let name = "Daigoh Hattori"
+    var name:String
     
     init() {
+        name = ""
         // 下ごしらえは、すぐにやる
         prepareCooking()
     }
-    
+
     // 下ごしらえ
     func prepareCooking() {
         print("prepareCooking...ok")
@@ -40,6 +41,7 @@ class RamenChef : Chef {
     override init() {
         recommendedIngredient = Ingredient(noodles: recommendedNoodles, soup: recommendedSoup, topping: recommendedTopping)
         super.init()
+        self.name = "Daigoh Hattori"
     }
     
     override func cooking(ingredient:Ingredient) {
