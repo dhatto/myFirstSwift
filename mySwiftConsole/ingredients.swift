@@ -12,6 +12,4 @@ struct Ingredient {
     var noodles:String
     var soup:String
     var topping:String
-    //var roasTedPork:String
-    
 }

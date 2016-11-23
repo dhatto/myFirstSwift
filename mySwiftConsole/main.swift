@@ -52,6 +52,7 @@ var ingredient:Ingredient = Ingredient(noodles: "太麺", soup: "味噌", toppin
 var myRamen:Ramen
 myRamen = myRamenChef.request(ingredient: ingredient)
 
+
 //var chefs:[Chef];
 
 

@@ -22,10 +22,10 @@ class Chef {
         print("prepareCooking...ok")
     }
 
-    func cooking(ingredient:Ingredient) {
+    func cooking(target:Ingredient) {
         print("cooking..ok!")
     }
-    
+
     func order() {
         
     }
@@ -44,9 +44,8 @@ class RamenChef : Chef {
         self.name = "Daigoh Hattori"
     }
     
-    override func cooking(ingredient:Ingredient) {
-        super.cooking(ingredient: recommendedIngredient)
-        print("ramen cooking...ok! created by " + name)
+    override func cooking(target:Ingredient) {
+        super.cooking(target: target)
     }
 
     // お任せで作って
@@ -60,9 +59,12 @@ class RamenChef : Chef {
 //            ingredient.noodles = recommendedNoodles
 //        }
 
-        let ramen:Ramen = Ramen(ingredient:recommendedIngredient)
-        cooking(ingredient: recommendedIngredient)
-        
+        let ramen:Ramen = Ramen(ingredient:ingredient)
+        cooking(target:ingredient)
+        if(ramen.cook()) {
+            print("ramen cooking...ok! created by " + name)
+        }
+
         return ramen
     }
 }
