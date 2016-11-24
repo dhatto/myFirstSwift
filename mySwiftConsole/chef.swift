@@ -16,7 +16,7 @@ protocol SomeProtocol {
 }
 
 class Chef {
-    fileprivate var name:Name // privateだとChefのサブクラスからアクセスできない
+    fileprivate var name:Name // privateだとChefのサブクラスからアクセスできない。またfileprivateは、別ファイルにサブクラスを定義しても呼び出せないのだ！
 
     init() {
         name = ""

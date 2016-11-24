@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class FriedRiceCheff : Chef {
+    override init() {
+        super.init()
+        self.prepareCooking()
+        //self.name
+//        self.order()
+//        self.cooking(target: Ingredient)
+    }
+}

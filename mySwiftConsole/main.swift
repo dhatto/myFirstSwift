@@ -51,6 +51,7 @@ var myRamenChef:RamenChef = RamenChef()
 var ingredient:Ingredient = Ingredient(noodles: "太麺", soup: "味噌", topping: "ネギ") // 自分好みのものを指定
 var myRamen:Ramen
 myRamen = myRamenChef.request(ingredient: ingredient)
+//myRamenChef.name
 
 
 //var chefs:[Chef];
