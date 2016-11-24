@@ -8,9 +8,12 @@
 
 import Foundation
 
+// 型定義
+typealias Name = String
+
 class Chef {
-    var name:String
-    
+    var name:Name
+
     init() {
         name = ""
         // 下ごしらえは、すぐにやる
@@ -61,8 +64,16 @@ class RamenChef : Chef {
 
         let ramen:Ramen = Ramen(ingredient:ingredient)
         cooking(target:ingredient)
-        if(ramen.cook()) {
-            print("ramen cooking...ok! created by " + name)
+        // クロージャの定義
+        func completionHandler() -> Void {
+            print("調理完了")
+        }
+        // クロージャを指定して実行
+        ramen.cook2(handler: completionHandler)
+        
+        // クロージャを直接指定
+        ramen.cook { (msg) in
+            print("ramen cooking...ok! \(msg) created by " + self.name)
         }
 
         return ramen
