@@ -10,9 +10,13 @@ import Foundation
 
 // 型定義
 typealias Name = String
+// インターフェース
+protocol SomeProtocol {
+    func someMethod()
+}
 
 class Chef {
-    var name:Name
+    fileprivate var name:Name // privateだとChefのサブクラスからアクセスできない
 
     init() {
         name = ""
