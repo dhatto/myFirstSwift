@@ -12,7 +12,7 @@ class FriedRiceCheff : Chef {
     override init() {
         super.init()
         self.prepareCooking()
-        //self.name
+        //self.name // nameプロパティはfileprivateなので、このファイルからは参照できないのだ！
 //        self.order()
 //        self.cooking(target: Ingredient)
     }
