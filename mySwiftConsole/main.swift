@@ -47,14 +47,63 @@ import Foundation
 //var myChef:Chef = Chef()
 //myChef.order()
 
-var myRamenChef:RamenChef = RamenChef()
-var ingredient:Ingredient = Ingredient(noodles: "太麺", soup: "味噌", topping: "ネギ") // 自分好みのものを指定
-var myRamen:Ramen
-myRamen = myRamenChef.request(ingredient: ingredient)
+//var myRamenChef:RamenChef = RamenChef()
+//var ingredient:Ingredient = Ingredient(noodles: "太麺", soup: "味噌", topping: "ネギ") // 自分好みのものを指定
+//var myRamen:Ramen
+//myRamen = myRamenChef.request(ingredient: ingredient)
 //myRamenChef.name
 
 
 //var chefs:[Chef];
+
+//var myTest:UnicodeScalar //Unicodeの文字コードを表す
+
+
+// 0から100まで繰り返し
+//for i in 0...100 {
+//    print(String(i))
+//}
+
+var mySum = 0
+// where区で、偶数の場合のみループを実行する
+for j in 0...100 where j % 2 == 0 {
+    // terminatorをつけると、改行とは別の方法で区切れる。
+    print("\(j)", terminator:",")
+}
+
+func nestFunc() -> Int {
+    var d = 1
+
+    // ネスト関数。関数定義前に定義された変数を使うことが出来る。
+    func myNestFunc() {
+        d = 100
+    }
+
+    return d
+}
+
+// タプル型を定義
+let photo = ("test.jpg", 640, 480)
+// 一度に3つの定数定義し、photoから代入！
+let (fileName, width, height) = photo
+print("\(fileName): \(width): \(height)")
+
+// Indexでアクセスすることも可能
+// photo.0
+var day = (1,1)
+
+switch(day) {
+case(1,1): // 1月1日を表す
+    print("")
+case (8, let d): //8月は全て該当する！日付をd定数に入れる(caseの中のみで有効)
+    print ("8月\(d)日は夏休み！")
+case (12, _):
+    print("冬休みやでー")
+default:
+    print("")
+}
+
+
 
 
 
